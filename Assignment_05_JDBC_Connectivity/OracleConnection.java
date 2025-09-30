@@ -11,11 +11,11 @@ package Assignment_05_JDBC_Connectivity;
 			
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/OEC1","BJS","123");
+			Connection con=DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/orclpdb","xyz","123");
 			
 			Statement st=con.createStatement();
 			
-			String query="SELECT * from employee";
+			String query="SELECT * from emp";
 			ResultSet rs=st.executeQuery(query);
 			while(rs.next()) {
 				System.out.println(rs.getInt(1)+" "+rs.getString(2));
